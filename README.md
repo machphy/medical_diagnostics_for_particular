@@ -57,7 +57,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/machphy/xray_diagnosis_project.git
+git clone https://github.com/machphy/medical_diagnostics_for_particular
 cd xray_diagnosis_project
 Install dependencies:
 
