@@ -21,6 +21,9 @@ The project is structured as follows:
 - **`train_model.py`**: Script for training the X-ray diagnosis model.
 - **`xray_diagnosis_model.h5`**: Pre-trained model for diagnosing X-ray images.
 
+**Note**: The `chest_xray/` directory containing the dataset (with `train/`, `val/`, and `test/` subdirectories) and the `xray_diagnosis_model.h5` pre-trained model file are not included in this repository due to their large size.
+
+
 ## Installation
 To run this project locally, follow these steps:
 
