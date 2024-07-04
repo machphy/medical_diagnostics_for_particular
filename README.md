@@ -1,80 +1,67 @@
-X-ray Diagnosis Project
-Overview
-This project develops a machine learning model for diagnosing X-ray images. It includes data preprocessing, model training, and a Flask-based web application for real-time diagnosis using the trained models.
 
-Project Structure
-arduino
-Copy code
-xray_diagnosis_project/
-│
-├── chest_xray/
-│   ├── train/
-│   ├── val/
-│   └── test/
-│
-├── uploads/
-│
-├── templates/
-│   ├── index.html
-│   ├── result.html
-│   └── template.html
-│
-├── static/
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── script.js
-│
-├── app.py
-├── data_preprocessing.py
-├── train_model.py
-└── xray_diagnosis_model.h5
-Components
-Dataset
-The chest_xray directory contains subdirectories (train, val, test) for training, validation, and testing datasets.
+# X-ray Diagnosis Project
 
-Data Preprocessing (data_preprocessing.py)
-This script preprocesses X-ray images, including resizing, normalization, and augmentation.
+## Overview
+This project aims to create a machine learning model for diagnosing X-ray images of chest conditions. It includes data preprocessing, model training using deep learning techniques, and a Flask-based web application for real-time diagnosis.
 
-Model Training (train_model.py)
-Defines and trains a deep learning model using TensorFlow/Keras on preprocessed data. The trained model is saved as xray_diagnosis_model.h5.
+## Project Structure
+The project is structured as follows:
 
-Flask Web Application (app.py)
-Main Flask application handling:
+- **`chest_xray/`**: Contains the dataset divided into `train/`, `val/`, and `test/` subdirectories.
+- **`uploads/`**: Directory where user-uploaded X-ray images are stored for diagnosis.
+- **`templates/`**: Contains HTML templates for the Flask web application.
+  - `index.html`: Main page for uploading X-ray images.
+  - `result.html`: Page for displaying diagnosis results.
+  - `base.html`: Base template for layout and common elements.
+- **`static/`**: Directory for static files (CSS, JavaScript).
+  - `style.css`: Custom CSS for styling the application.
+  - `script.js`: JavaScript for client-side functionality.
+- **`app.py`**: Flask application file handling routes and interactions.
+- **`data_preprocessing.py`**: Script for preprocessing X-ray images.
+- **`train_model.py`**: Script for training the X-ray diagnosis model.
+- **`xray_diagnosis_model.h5`**: Pre-trained model for diagnosing X-ray images.
 
-Uploading X-ray images (stored in uploads directory).
-Processing uploaded images using the trained model.
-Dynamically rendering results (result.html).
-Templates (templates/)
-index.html: Landing page with an upload form for X-ray images.
-result.html: Displays diagnosis results.
-template.html: Basic template for additional pages if needed.
-Static Files (static/)
-styles.css: CSS styles for templates.
-script.js: JavaScript for client-side functionality if required.
-Setup Instructions
-Clone the repository:
+## Installation
+To run this project locally, follow these steps:
 
-bash
-Copy code
-git clone https://github.com/machphy/medical_diagnostics_for_particular
-cd xray_diagnosis_project
-Install dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/machphy/medical_diagnostics_for_particular
+   cd xray_diagnosis_project
+   ```
 
-bash
-Copy code
-pip install -r requirements.txt
-Run the Flask application:
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-bash
-Copy code
-python app.py
-Navigate to http://localhost:5000 in your web browser to access the application.
+3. Run the Flask application:
+   ```bash
+   python app.py
+   ```
 
-Usage
-Upload an X-ray image via the homepage.
-Click "Diagnose" to process the image.
-View the diagnosis result on the result page.
-Notes
-Ensure sufficient permissions and dependencies are installed (requirements.txt).
-Adjust paths and configurations (app.py, data_preprocessing.py, etc.) as per your environment.
+4. Open your web browser and go to `http://localhost:5000` to use the application.
+
+## Usage
+- Navigate to the main page (`/`) to upload an X-ray image.
+- After uploading, the image will be processed, and the diagnosis result will be displayed on the `result` page.
+
+## Technologies Used
+- Python
+- Flask
+- OpenCV
+- TensorFlow/Keras
+
+## Contributing
+Contributions are welcome. If you'd like to contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/new-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/new-feature`).
+6. Create a new Pull Request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+```
+rajeebsharma@2024
